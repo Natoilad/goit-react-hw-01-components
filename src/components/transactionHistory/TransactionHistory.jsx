@@ -16,7 +16,9 @@ export const TransactionHistory = ({ items }) => {
           {items.map(item => {
             return (
               <tr className={css.tr} key={item.id}>
-                <td className={css.td}>{item.type}</td>
+                <td className={css.td} style={{ textTransform: 'capitalize' }}>
+                  {item.type}
+                </td>
                 <td className={css.td}>{item.amount}</td>
                 <td className={css.td}>{item.currency}</td>
               </tr>
